@@ -533,7 +533,7 @@ class AppDynamicsClient(object):
         :returns: JSON string
         """
 
-        return self.request('/controller/actions/{0}'.format(application_id), {}, 'GET', query=True, use_json=False)
+        return self.request('/controller/policies/{0}'.format(application_id), {}, 'GET', query=True, use_json=False)
 
     def import_policies(self, application_id, json):
         """
@@ -545,7 +545,7 @@ class AppDynamicsClient(object):
         :returns: JSON string, containing success or failure messages
         """
 
-        path = '/controller/actions/{0}'.format(application_id)
+        path = '/controller/policies/{0}'.format(application_id)
 
         return self.upload(path, json)
 
